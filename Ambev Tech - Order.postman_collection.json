@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "7552774e-12c2-4610-af5c-578330951c53",
+		"name": "Ambev Tech - Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find All By Filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders?oderBy=name&direction=ASC&pageNumber=0&pageSize=20&name=Espumante&sku=6414c222-8a69-46b8-b9ae-beab60f4e086&startDate=2025-03-01&endDate=2025-03-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "oderBy",
+							"value": "name"
+						},
+						{
+							"key": "direction",
+							"value": "ASC"
+						},
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "20"
+						},
+						{
+							"key": "name",
+							"value": "Espumante"
+						},
+						{
+							"key": "sku",
+							"value": "6414c222-8a69-46b8-b9ae-beab60f4e086"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-03-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find By Order Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders/28dfa6d37331",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"28dfa6d37331"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -6,7 +6,6 @@ import br.com.ambevtech.order.service.OrderService;
 import java.time.LocalDate;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,7 +45,7 @@ public class OrderController {
         return ResponseEntity.ok().body(ordersPaginated);
     }
 
-    @GetMapping(value = "?{orderNumber}")
+    @GetMapping(value = "/{orderNumber}")
     public ResponseEntity<OrderDTO> findByOrderNumber(@PathVariable String orderNumber) {
         final OrderDTO orderDTO = orderService.findByOrderNumber(orderNumber);
         return ResponseEntity.ok().body(orderDTO);
